@@ -1547,7 +1547,6 @@ synchronous_standby_names(PG_FUNCTION_ARGS)
 
 	if (primaryNode == NULL)
 	{
-		/* maybe we could use an Assert() instead? */
 		ereport(ERROR,
 				(errmsg("Couldn't find the primary node in formation \"%s\", "
 						"group %d", formationId, groupId)));
